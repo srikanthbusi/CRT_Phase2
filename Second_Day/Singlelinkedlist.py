@@ -29,24 +29,28 @@ def insert_at_e(data,head): # a function which takes two arguments data and next
         temp = temp.next
     temp.next = newNode
     return head
-def mid(head):
-    l =  display(head)
+def mid(head):  #to find a middle value
+    l =  8
     middle = l//2
     c1 = 0
     temp =head
-    while temp!=None and c1<=middle:
+    while temp!=None and c1<middle:
         c1 = c1+1
         temp = temp.next
-    return temp.data
+    ans =temp.data
+    print("The middle element is",ans)
+def delete(target,head):
+     temp = head
+     while temp!=None:
+        if temp.next.data == target:
+            temp.next = temp.next.next.data
+
+        
+               
     
-     
-    
-display(head)
 head = insert_atb(65,head)
 head = insert_atb(21,head)
-print(head)
+head = insert_at_e(56,head)
+head = insert_at_e(77,head)
 display(head)
-head = insert_at_e(65,head)
-head = insert_at_e(21,head)
-print(head)
-display(head)
+mid(head)
