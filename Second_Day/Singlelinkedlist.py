@@ -40,17 +40,42 @@ def mid(head):  #to find a middle value
     ans =temp.data
     print("The middle element is",ans)
 def delete(target,head):
-     temp = head
-     while temp!=None:
+    temp = head
+    while temp!=None:
         if temp.next.data == target:
             temp.next = temp.next.next.data
+        temp = next.data
+    return temp
+    
+def reverse(head):  #reverse
+    current = head
+    prev = None
 
-        
-               
+    while current!=None:
+        next = current.next
+        current.next = prev
+        prev = current
+        current = next
+    return prev
+
+# def reverse1(head,n):  #reverse
+#     curr = head
+#     prev = None
+#     count =0
+#     while curr!=None and count<n:
+#         next = curr.next
+#         curr.next = prev
+#         prev = curr
+#         curr = next
+#         count+=1
+#     if next!= None:
+#         head.next
+#     return prev              
     
 head = insert_atb(65,head)
 head = insert_atb(21,head)
 head = insert_at_e(56,head)
 head = insert_at_e(77,head)
-display(head)
 mid(head)
+r = reverse(head)
+display(r)
