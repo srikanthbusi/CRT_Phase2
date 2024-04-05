@@ -62,7 +62,6 @@ ninth= Node(0)
 tenth = Node(1)
 Eleventh = Node(1)
 
-
 head.prev = None
 head.next = second
 
